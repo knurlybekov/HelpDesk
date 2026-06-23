@@ -1,37 +1,36 @@
-Автоматизированная система Help Desk с функцией отправки почты
+# HelpDesk
 
-Описание проекта
+A Windows Forms (C#/.NET) Help Desk desktop application for registering, processing, and closing IT support tickets, with email notifications. Built as a diploma/thesis project.
 
-Данный проект представляет собой автоматизированную систему Help Desk, которая предназначена для регистрации, обработки и закрытия заявок пользователей с возможностью отправки уведомлений по электронной почте. Система предназначена для повышения уровня обслуживания в компаниях, минимизации простоев и улучшения эффективности ИТ-отделов.
+## Overview
 
-Цели проекта
+HelpDesk streamlines IT support workflows: users submit tickets describing a problem (computer name, problem type, printer details, description), support staff process and close them, and the system sends email notifications on status changes. It also supports service-quality rating after a ticket is closed.
 
-Создание интуитивно понятного интерфейса для подачи и обработки заявок.
-Автоматизация процессов обработки инцидентов и уменьшение количества ручных операций.
-Внедрение системы отчетности для анализа качества обслуживания.
-Повышение эффективности работы ИТ-отдела за счет автоматизированного учета и обработки заявок.
-Функционал
+## Features
 
-Подача заявок: Пользователи могут быстро и удобно отправлять заявки, указывая информацию о проблеме.
-Обработка заявок: Сотрудники техподдержки могут принимать заявки, добавлять информацию об их выполнении и закрывать их.
-Уведомления: Пользователям автоматически отправляются уведомления о статусе их заявок.
-Оценка качества: После закрытия заявки пользователи могут оценить качество обслуживания.
-Основные этапы разработки
+- Submit support tickets with structured fields
+- Process, update, and close tickets
+- Automated email notifications to users
+- Service-quality feedback after closure
+- Reporting for service-quality analysis
 
-Определение требований и проектирование интерфейса.
-Разработка системы с использованием ASP.NET и Google Cloud Platform.
-Тестирование системы и устранение выявленных ошибок.
-Развертывание и установка системы для конечных пользователей.
-Обучение сотрудников компании-заказчика для дальнейшего сопровождения.
-Используемые технологии
+## Tech Stack
 
-Microsoft Visual Studio: Основная среда разработки для реализации функционала Help Desk.
-ASP.NET: Для создания веб-интерфейса системы.
-Google Cloud SQL: Для хранения данных о заявках и пользователях.
-SQL Server: Для управления базой данных.
-Руководство по установке
+C# · .NET Windows Forms · SQL Server / Google Cloud SQL
 
-Установите необходимые компоненты и среды, указанные в разделе "Используемые технологии".
-Клонируйте репозиторий и настройте подключение к базе данных Google Cloud SQL.
-Настройте параметры электронной почты для отправки уведомлений.
-Запустите сервер и убедитесь, что система работает корректно.
+## Project Structure
+
+```
+WindowsFormsApp7/
+  WindowsFormsApp7.sln           # Visual Studio solution
+  WindowsFormsApp7/
+    Program.cs                   # Entry point
+    Class1.cs / Class2.cs        # Domain models (ticket fields)
+    App.config                   # DB/email configuration
+```
+
+## Building
+
+Open `WindowsFormsApp7.sln` in Visual Studio and build/run. Configure the database connection and SMTP settings in `App.config`.
+
+*(Original project documentation is in Russian.)*
